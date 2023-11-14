@@ -1,3 +1,5 @@
+# [earliest commit: remzi-arpacidusseau committed on Feb 26, 2018](https://github.com/OccupyMars2025/ostep-code/commit/54a012aa8efbb741a12626942811113299bf7d24)
+
 # ostep-code
 Code from various chapters in OSTEP (http://www.ostep.org)
 
