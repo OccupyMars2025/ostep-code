@@ -13,7 +13,7 @@ void *mythread(void *arg) {
     int i; // stack (private per thread) 
     printf("%s: begin [addr of i: %p]\n", letter, &i);
     for (i = 0; i < max; i++) {
-	counter = counter + 1; // shared: only one
+	    counter = counter + 1; // shared: only one
     }
     printf("%s: done\n", letter);
     return NULL;
@@ -27,8 +27,7 @@ int main(int argc, char *argv[]) {
     max = atoi(argv[1]);
 
     pthread_t p1, p2;
-    printf("main: begin [counter = %d] [%x]\n", counter, 
-	   (unsigned int) &counter);
+    printf("main: begin [counter = %d] [%p]\n", counter, &counter);
     Pthread_create(&p1, NULL, mythread, "A"); 
     Pthread_create(&p2, NULL, mythread, "B");
     // join waits for the threads to finish

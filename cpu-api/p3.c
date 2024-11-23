@@ -19,6 +19,7 @@ main(int argc, char *argv[])
         char *myargs[3];
         myargs[0] = strdup("wc");   // program: "wc" (word count)
         myargs[1] = strdup("p3.c"); // argument: file to count
+        // myargs[1] = strdup("p3111.c"); // argument: file to count, but this file doesn't exit
         myargs[2] = NULL;           // marks end of array
         execvp(myargs[0], myargs);  // runs word count
         printf("this shouldn't print out");
@@ -28,5 +29,6 @@ main(int argc, char *argv[])
         printf("hello, I am parent of %d (wc:%d) (pid:%d)\n",
 	       rc, wc, (int) getpid());
     }
+    printf("(pid:%d)\n", getpid());
     return 0;
 }
